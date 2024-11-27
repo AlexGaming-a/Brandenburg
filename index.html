@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolfsburg Roleplay</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1e1e2f, #28293e);
+            color: #fff;
+        }
+        header {
+            background-color: #1a1a2e;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #f4c10f;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #162447;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #f4c10f;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #e94560;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        section h2 {
+            color: #f4c10f;
+            font-size: 2em;
+        }
+        section p {
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .feature {
+            width: 30%;
+            background: #1a1a2e;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .feature h3 {
+            color: #f4c10f;
+        }
+        footer {
+            background-color: #1a1a2e;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            color: #aaa;
+        }
+        /* Schnee Animation */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px) translateX(0);
+            }
+            100% {
+                transform: translateY(100vh) translateX(calc(50vw - 50%));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Willkommen auf Wolfsburg Roleplay</h1>
+    </header>
+    <nav>
+        <a href="#about">Über uns</a>
+        <a href="#features">Features</a>
+        <a href="#join">Mitmachen</a>
+    </nav>
+    <section id="about">
+        <h2>Über uns</h2>
+        <p>Realistische Spielwelt: Unsere Stadt Wolfsburg wurde mit viel Liebe zum Detail gestaltet, um eine immersive Umgebung zu schaffen. Egal, ob du die Straßen erkundest, Geschäfte besuchst oder dein eigenes Unternehmen gründest – alles fühlt sich lebendig und real an.</p>
+    </section>
+    <section id="features">
+        <h2>Unsere Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Custom Scripts</h3>
+                <p>Wolfsburg Roleplay hebt sich durch eine Vielzahl von speziell entwickelten Custom Scripts ab, die das Spielerlebnis auf ein völlig neues Level bringen.</p>
+            </div>
+            <div class="feature">
+                <h3>Einzigartige Fahrzeuge</h3>
+                <p>Autobahn Polizei BMW, VW Passat, Mercedes RTW und vieles mehr.</p>
+            </div>
+            <div class="feature">
+                <h3>Aktive Community</h3>
+                <p>Die Community von Wolfsburg Roleplay ist das Herzstück unseres Servers und macht uns zu etwas Besonderem.</p>
+            </div>
+        </div>
+    </section>
+    <section id="join">
+        <h2>Wie du beitreten kannst</h2>
+        <p>Besuche uns auf unserem Discord-Server und finde heraus, wie du Teil unserer Welt werden kannst.</p>
+        <a href="https://discord.gg/yj24EB3Pyt" style="color: #f4c10f; font-size: 1.2em; text-decoration: underline;">Tritt unserem Discord bei</a>
+    </section>
+    <footer>
+        <p>&copy; 2024 Wolfsburg Roleplay. Alle Rechte vorbehalten.</p>
+    </footer>
+    <!-- Schnee -->
+    <script>
+        const body = document.body;
+        for (let i = 0; i < 50; i++) {
+            const snowflake = document.createElement("div");
+            snowflake.className = "snowflake";
+            snowflake.textContent = "❄";
+            snowflake.style.left = Math.random() * 100 + "vw";
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+            snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+            snowflake.style.opacity = Math.random();
+            body.appendChild(snowflake);
+        }
+    </script>
+</body>
+</html>
